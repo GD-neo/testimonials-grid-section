@@ -1,0 +1,200 @@
+:root { 
+    --primaryModerateViolet: hsl(263, 55%, 52%);
+    --primaryVeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --primaryVeryDarkBlackishBlue: hsl(219, 29%, 14%);
+    --primaryWhite: hsl(0, 0%, 100%);
+
+    --primaryVeryDarkGrayishBlue5Opacity: hsla(217, 19%, 35%, 0.5);
+    --primaryVeryDarkGrayishBlue7Opacity: hsla(217, 19%, 35%, 0.7);
+
+
+    --primaryWhiteLowOpacity: hsla(0, 0%, 100%, 0.5);
+    --primaryWhite7Opacity: hsla(0, 0%, 100%, 0.7);
+
+    --neutralLightGray: hsl(0, 0%, 81%); 
+    --neutralGrayishBlue: hsl(210, 46%, 95%);
+
+    font-size: 62.5%;
+}
+/* @font-face {
+    font-family: 'ChallengeFont';
+    src: url(./f);
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body { 
+    /* margin: auto; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    background-color: var(--neutralGrayishBlue);
+}
+
+main { 
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: span;
+    display: grid;
+    grid-template: 282px 266px / 255px 255px 255px 255px;
+    gap: 24px 30px;
+}
+footer { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.card { 
+    border-radius: 1rem;
+    border: none;
+    padding: 2.3rem 2.8rem;
+    position: relative;
+    
+}
+.img-quotation { 
+    position: absolute;
+    left: 35rem;
+    top: 0px;
+    z-index: 0;
+    width: 103px;
+    /* height: auto; */
+    
+    /* background-color: red; */
+}
+.image-div{
+    border-radius: 50%;
+    width: 3rem;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid var(--primaryModerateViolet);
+}
+.image-div img { 
+    width: 100%;
+}
+.names { 
+    margin-left: 1rem;
+}
+.profile { 
+    display: flex;
+    align-items: center;
+}
+.grid-item-purple { 
+    background-color: var(--primaryModerateViolet);
+    grid-area: 1/1/2/3;
+}
+.grid-item-grey { 
+    background-color: var(--primaryVeryDarkGrayishBlue);
+    grid-area: 1/3/span 1/ span 1;
+}
+.grid-item-white-big{
+    background-color: var(--primaryWhite);
+    grid-area: 1/4/span 2/span 1;
+    /* height: 572px; */
+}
+.grid-item-white-small{
+    background-color: var(--primaryWhite);
+    grid-area: 2/1/span 1/ span 1 ;
+    /* height: 218px; */
+}
+.grid-item-black {
+    background-color: var(--primaryVeryDarkBlackishBlue);
+    grid-area: 2/2/span 1/span 2;
+}
+.grid-item-purple h4, .grid-item-grey h4, .grid-item-black h4  { 
+    color: var(--primaryWhite);
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    background-color: transparent;
+    position: relative;
+    z-index: 5;
+}
+.grid-item-purple h2, .grid-item-grey h2, .grid-item-black h2 { 
+    color: var(--primaryWhite);
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+.grid-item-purple h3, .grid-item-grey h3, .grid-item-black h3 { 
+    color: var(--primaryWhiteLowOpacity);
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 0.1rem;
+}
+.grid-item-purple p, .grid-item-grey p, .grid-item-black p { 
+    color: var(--primaryWhite7Opacity);
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-top: 1.7rem;
+    line-height: 1.35;
+}
+/* The 2 White Cards styled */
+.grid-item-white-big h4, .grid-item-white-small h4 { 
+    color: var(--primaryVeryDarkGrayishBlue);
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    background-color: transparent;
+}
+.grid-item-white-big h2, .grid-item-white-small h2 {
+    color: var(--primaryVeryDarkGrayishBlue);
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+.grid-item-white-big h3, .grid-item-white-small h3 {
+    color: var(--primaryVeryDarkGrayishBlue5Opacity);
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 0.1rem;
+}
+.grid-item-white-big p, .grid-item-white-small p { 
+    color: var(--primaryVeryDarkGrayishBlue7Opacity);
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+    line-height: 1.3;
+} 
+/* End syling white cards */
+
+/* MOBILE */
+@media (max-width: 1200px) {
+    main { 
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 7rem;
+        
+    }
+    .card { 
+        max-width: 325px;
+        border-radius: 1rem;
+        border: none;
+        padding: 2.5rem 3.2rem;
+        /* position: relative; */
+        box-sizing: border-box;
+        
+    }
+    .img-quotation { 
+        position: absolute;
+        left: 19.8rem;
+        top: 0px;
+        z-index: 0;
+        width: 103px;
+        /* height: auto; */
+        
+        /* background-color: red; */
+    }
+}
+
